@@ -42,7 +42,7 @@ There's no need to configure anything before running the application. There are
 
 Run this command:
 
-```bash
+```console
 pnpm run dev
 ```
 
@@ -50,7 +50,7 @@ Then access the application in your browser at the given URL (<http://localhost:
 
 **Option 2. Run the application in prod mode**
 
-```bash
+```console
 pnpm run build
 ```
 You now have your fresh JavaScript files for production 🚀.
@@ -61,7 +61,7 @@ Tests
 
 Execute this command to run tests:
 
-```bash
+```console
 pnpm exec playwright test
 ```
 
