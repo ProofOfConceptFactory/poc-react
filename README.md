@@ -1,30 +1,70 @@
-# React + TypeScript + Vite
+Hello from React!👋
+========================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The "Hello from React!👋" application is just a starter to show a minimalist React.js app.
 
-Currently, two official plugins are available:
+Requirements
+------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [Node.js][1]
+* [NPM][1], [PNPM][2] or [Yarn][3]
 
-## Expanding the ESLint configuration
+Installation
+------------
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Clone this repository:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```console
+https://github.com/abdounikarim/poc-react
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go on the project root folder:
+
+```console
+cd poc-react/
+```
+
+Install JavaScript dependencies:
+
+```console
+pnpm install
+```
+
+_Or use the equivalent command with npm or yarn_
+
+Usage
+-----
+
+There's no need to configure anything before running the application. There are
+2 different ways of running this application depending on your needs:
+
+**Option 1. Run the application in dev mode**
+
+Run this command:
+
+```bash
+pnpm run dev
+```
+
+Then access the application in your browser at the given URL (<http://localhost:5173> by default).
+
+**Option 2. Run the application in prod mode**
+
+```bash
+pnpm run build
+```
+You now have your fresh JavaScript files for production 🚀.
+You can check everything is OK by opening the `index.html` file and navigate on your application.
+
+Tests
+-----
+
+Execute this command to run tests:
+
+```bash
+pnpm exec playwright test
+```
+
+[1]: https://nodejs.org/en/download/package-manager
+[2]: https://pnpm.io/installation
+[3]: https://yarnpkg.com/getting-started/install
