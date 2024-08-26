@@ -6,8 +6,7 @@ The "Hello from React!👋" application is just a starter to show a minimalist R
 Requirements
 ------------
 
-* [Node.js][1]
-* [NPM][1], [PNPM][2] or [Yarn][3]
+* [Docker Desktop][1]
 
 Installation
 ------------
@@ -24,13 +23,11 @@ Go on the project root folder:
 cd poc-react/
 ```
 
-Install JavaScript dependencies:
+Execute this command to launch docker container in dev:
 
 ```console
-pnpm install
+docker compose -f docker/compose.yaml up -d
 ```
-
-_Or use the equivalent command with npm or yarn_
 
 Usage
 -----
@@ -40,21 +37,21 @@ There's no need to configure anything before running the application. There are
 
 **Option 1. Run the application in dev mode**
 
-Run this command:
+Start the application using the vite server:
 
 ```console
-pnpm run dev
+docker compose -f docker/compose.yaml exec node pnpm run dev
 ```
 
-Then access the application in your browser at the given URL (<http://localhost:5173> by default).
+Then access the application in your browser at the given URL (<http://localhost:8000> by default).
 
 **Option 2. Run the application in prod mode**
 
 ```console
-pnpm run build
+docker compose -f docker/compose.yaml exec node pnpm run build
 ```
 You now have your fresh JavaScript files for production 🚀.
-You can check everything is OK by opening the `index.html` file and navigate on your application.
+You can check everything is OK by opening the [http://localhost:8000/dist/index.html][2] link and navigate on your application.
 
 Tests
 -----
@@ -62,9 +59,8 @@ Tests
 Execute this command to run tests:
 
 ```console
-pnpm exec playwright test
+docker compose -f docker/compose.yaml exec node pnpm exec playwright test
 ```
 
-[1]: https://nodejs.org/en/download/package-manager
-[2]: https://pnpm.io/installation
-[3]: https://yarnpkg.com/getting-started/install
+[1]: https://www.docker.com/products/docker-desktop/
+[2]: http://localhost:8000/dist/index.html
