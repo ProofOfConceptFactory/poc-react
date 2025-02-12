@@ -65,10 +65,16 @@ You can check everything is OK by opening the [https://localhost:8000/dist/index
 Tests
 -----
 
+Install Cypress dependencies:
+
+```console
+docker compose -f docker/compose.yaml exec node pnpm cypress install
+```
+
 Execute this command to run tests:
 
 ```console
-docker compose -f docker/compose.yaml exec node pnpm exec playwright test
+docker compose -f docker/compose.yaml exec node pnpm cypress run
 ```
 
 [1]: https://www.docker.com/products/docker-desktop/
