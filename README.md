@@ -7,6 +7,7 @@ Requirements
 ------------
 
 * [Docker Desktop][1]
+* [mkcert][2]
 
 Installation
 ------------
@@ -23,7 +24,15 @@ Go on the project root folder:
 cd poc-react/
 ```
 
-Execute this command to launch docker container in dev:
+Install certificate to use HTTPS:
+
+```console
+mkcert -install
+mkdir -p certs
+mkcert -key-file certs/poc-react.key.pem -cert-file certs/poc-react.crt.pem localhost
+```
+
+Execute this command to launch docker container:
 
 ```console
 docker compose -f docker/compose.yaml up -d
@@ -43,7 +52,7 @@ Start the application using the vite server:
 docker compose -f docker/compose.yaml exec node pnpm run dev
 ```
 
-Then access the application in your browser at the given URL (<http://localhost:8000> by default).
+Then access the application in your browser at the given URL (<https://localhost:8000> by default).
 
 **Option 2. Run the application in prod mode**
 
@@ -51,7 +60,7 @@ Then access the application in your browser at the given URL (<http://localhost:
 docker compose -f docker/compose.yaml exec node pnpm run build
 ```
 You now have your fresh JavaScript files for production 🚀.
-You can check everything is OK by opening the [http://localhost:8000/dist/index.html][2] link and navigate on your application.
+You can check everything is OK by opening the [https://localhost:8000/dist/index.html][3] link and navigate on your application.
 
 Tests
 -----
@@ -63,4 +72,5 @@ docker compose -f docker/compose.yaml exec node pnpm exec playwright test
 ```
 
 [1]: https://www.docker.com/products/docker-desktop/
-[2]: http://localhost:8000/dist/index.html
+[2]: https://github.com/FiloSottile/mkcert
+[3]: https://localhost:8000/dist/index.html
