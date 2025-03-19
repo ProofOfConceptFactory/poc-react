@@ -30,12 +30,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Configure base path in vite.config.js
-        run: |
-          if ! grep -q "base:" vite.config.ts; then
-            # Add base key to vite.config.ts
-            sed -i "/return {/a \\    base: isDev ? '/' : '/poc-react/'," vite.config.ts
-          fi
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
@@ -50,13 +44,5 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload dist folder
-          path: './dist'
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        run: pnpm run deploy
