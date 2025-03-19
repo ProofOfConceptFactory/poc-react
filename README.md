@@ -1,6 +1,8 @@
 Hello from React!👋
 ========================
 
+[![GitHub Pages](https://github.com/abdounikarim/poc-react/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/abdounikarim/poc-react/actions/workflows/github-pages.yaml)
+
 The "Hello from React!👋" application is just a starter to show a minimalist React.js app.
 
 Requirements
@@ -77,6 +79,16 @@ Execute this command to run tests:
 docker compose -f docker/compose.yaml exec node pnpm cypress run
 ```
 
+Deployment
+----------
+
+This application is deployed on [GitHub Pages][4].
+Everything is configured and managed automatically by [GitHub Actions][5].
+You can check the workflow file at [github/workflows/github-pages.yaml][6].
+
 [1]: https://www.docker.com/products/docker-desktop/
 [2]: https://github.com/FiloSottile/mkcert
 [3]: https://localhost:8000/dist/index.html
+[4]: https://pages.github.com/
+[5]: https://docs.github.com/en/actions
+[6]: .github/workflows/github-pages.yaml
