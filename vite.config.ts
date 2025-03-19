@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
   }
   
   return {
+    base: isDev ? '/' : '/poc-react/',
     plugins: [react()],
     server: serverConfig
   }
