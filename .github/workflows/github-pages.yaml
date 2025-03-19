@@ -37,7 +37,8 @@ jobs:
           cache: 'pnpm'
       - name: Install mkcert latest version and generate certificates
         run: |
-          curl -L https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-linux-amd64 -o mkcert
+          LATEST_VERSION=$(curl -s https://api.github.com/repos/FiloSottile/mkcert/releases/latest | jq -r '.tag_name')
+          curl -L -o mkcert "https://github.com/FiloSottile/mkcert/releases/download/${LATEST_VERSION}/mkcert-${LATEST_VERSION}-linux-amd64" -o mkcert
           chmod +x mkcert
           ./mkcert -install
           mkdir -p certs
