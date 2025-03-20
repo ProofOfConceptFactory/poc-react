@@ -40,6 +40,12 @@ Execute this command to launch docker container:
 docker compose -f docker/compose.yaml up -d
 ```
 
+Install JavaScript dependencies:
+
+```console
+docker compose -f docker/compose.yaml exec node pnpm install
+```
+
 Usage
 -----
 
