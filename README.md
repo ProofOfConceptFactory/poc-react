@@ -84,7 +84,7 @@ Deployment
 
 This application is deployed on [GitHub Pages][4].
 Everything is configured and managed automatically by [GitHub Actions][5].
-You can check the workflow file at [github/workflows/github-pages.yaml][6].
+You can check the workflow file at [.github/workflows/github-pages.yaml][6].
 
 [1]: https://www.docker.com/products/docker-desktop/
 [2]: https://github.com/FiloSottile/mkcert
