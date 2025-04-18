@@ -1,7 +1,7 @@
 Hello from React!👋
 ========================
 
-[![GitHub Pages](https://github.com/abdounikarim/poc-react/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/abdounikarim/poc-react/actions/workflows/github-pages.yaml)
+[![GitHub Pages](https://github.com/ProofOfConceptFactory/poc-react/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/ProofOfConceptFactory/poc-react/actions/workflows/github-pages.yaml)
 
 The "Hello from React!👋" application is just a starter to show a minimalist React.js app.
 
@@ -17,7 +17,7 @@ Installation
 Clone this repository:
 
 ```console
-https://github.com/abdounikarim/poc-react
+https://github.com/ProofOfConceptFactory/poc-react
 ```
 
 Go on the project root folder:
